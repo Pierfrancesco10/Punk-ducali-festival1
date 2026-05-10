@@ -1,87 +1,161 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Punk Ducali Festival</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Punk Ducali Festival — VI Edizione</title>
+  <meta name="description" content="Punk Ducali Festival — VI Edizione. 31 Luglio – 1 Agosto 2026, Villa Comunale, Atri (TE)." />
+  <meta property="og:title" content="Punk Ducali Festival — VI Edizione" />
+  <meta property="og:description" content="31 Luglio – 1 Agosto 2026 · Villa Comunale, Atri (TE)" />
+  <meta property="og:image" content="assets/posters/poster-2026.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Space+Grotesk:wght@400;600;700&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-<nav class="nav">
-  <img class="navlogo" src="./assets/logo-full.jpg">
-  <div class="links">
-    <a href="#lineup">LINE UP</a>
-    <a href="#video">VIDEO</a>
-    <a href="#archivio">ARCHIVIO</a>
-    <a href="#support">SOSTIENICI</a>
+  <div id="intro" class="intro" aria-hidden="true">
+    <img src="assets/logos/punk-ducali-logo-transparent.png" alt="" class="intro-logo" />
+    <div class="noise"></div>
   </div>
-</nav>
 
-<section class="hero">
-  <div class="overlay"></div>
-  <div class="hero-left">
-    <img class="mainlogo" src="./assets/logo-full.jpg">
-  </div>
-  <div class="hero-right">
-    <img class="poster" src="./assets/poster2026.jpg">
-  </div>
-</section>
+  <div class="sky-layer"></div>
+  <div class="grain"></div>
 
-<section id="lineup" class="section">
-<h2>LINE UP</h2>
-<div class="censorgrid">
-<div></div><div></div><div></div><div></div>
-<div></div><div></div><div></div><div></div>
-</div>
-</section>
+  <header class="navbar">
+    <a class="nav-brand" href="#home" aria-label="Punk Ducali Festival home">
+      <img src="assets/logos/punk-ducali-logo-transparent.png" alt="Punk Ducali Festival" />
+    </a>
+    <button class="menu-toggle" aria-label="Apri menu">☰</button>
+    <nav class="nav-links">
+      <a href="#lineup">Line up</a>
+      <a href="#video">Video</a>
+      <a href="#archive">Archivio</a>
+      <a href="#foto">Foto</a>
+      <a href="#sostienici">Sostienici</a>
+      <a href="#contatti">Contatti</a>
+    </nav>
+  </header>
 
-<section id="video" class="section">
-<h2>VIDEO</h2>
-<div class="videos">
-<a href="https://youtube.com/shorts/Ko8LknaNe_Q?si=jdN96FwwEWsmMBd0"><img src="https://img.youtube.com/vi/Ko8LknaNe_Q/hqdefault.jpg"></a>
-<a href="https://youtube.com/shorts/yVuRdgPoDdg?si=BQLauMwPYfHKJo00"><img src="https://img.youtube.com/vi/yVuRdgPoDdg/hqdefault.jpg"></a>
-<a href="https://youtube.com/shorts/X-580_vtsRE?si=dEhm8HujNIS2MRLb"><img src="https://img.youtube.com/vi/X-580_vtsRE/hqdefault.jpg"></a>
-</div>
-</section>
+  <main id="home">
+    <section class="hero section">
+      <div class="hero-copy reveal">
+        <img class="hero-logo" src="assets/logos/punk-ducali-logo-transparent.png" alt="Punk Ducali Festival VI Edizione 31 Luglio - 1 Agosto" />
+        <p class="eyebrow">VI EDIZIONE · VILLA COMUNALE · ATRI (TE)</p>
+        <h1>31 Luglio — 1 Agosto 2026</h1>
+        <div class="hero-actions">
+          <a class="btn primary" href="#sostienici">Sostieni il festival</a>
+          <button id="chaosBtn" class="btn chaos" type="button">ENABLE CHAOS</button>
+        </div>
+      </div>
+      <div class="poster-stage reveal delay-1">
+        <img class="poster-main" src="assets/posters/poster-2026.jpg" alt="Locandina Punk Ducali Festival VI Edizione" />
+        <span class="tape tape-a"></span>
+        <span class="tape tape-b"></span>
+      </div>
+    </section>
 
-<section id="archivio" class="section">
-<h2>ARCHIVIO EDIZIONI</h2>
-<div class="archive">
-<div class="year"><span>2025</span><p>Marsh Mallows · Latte+ · Cabrera · Punk Ducali · Zia Shaniqua · Lillians · Libidine · Venere Gommosa · The Underdogs · Devasta · Degeneradio · Lil Spino · Pleiades · Cam'Out · Helycobacter · Manny · Noise Caps · Nix</p></div>
-<div class="year"><span>2024</span><p>RFC · Spaventapassere · Civic-50 · Loser Name · Punk Ducali · Zia Shaniqua · Thousand Years Between · Penelope Aspetta · Kusameze · Random Act · I Treni · Fainted · The Blink Bang Theory · Degeneradio · Cam'Out · Jack Anal · Stoneguard · Dalts</p></div>
-</div>
-</section>
+    <section id="lineup" class="section lineup-section">
+      <div class="section-head reveal">
+        <p class="eyebrow">CLASSIFIED TRANSMISSION</p>
+        <h2>LINE UP</h2>
+      </div>
+      <div class="redacted-grid reveal delay-1" aria-label="Line up censurata">
+        <span>████████████</span><span>███████</span><span>███████████</span><span>████████</span>
+        <span>██████████████</span><span>██████</span><span>██████████</span><span>████████████</span>
+        <span>███████</span><span>█████████████</span><span>██████</span><span>███████████</span>
+      </div>
+    </section>
 
-<section class="gallery section">
-<h2>FOTO</h2>
-<div class="photos">
-<img src="./assets/live1.jpg">
-<img src="./assets/live2.jpg">
-<img src="./assets/live3.jpg">
-<img src="./assets/live4.jpg">
-<img src="./assets/live5.jpg">
-<img src="./assets/live6.jpg">
-<img src="./assets/live7.jpg">
-<img src="./assets/live8.jpg">
-<img src="./assets/live9.jpg">
-</div>
-</section>
+    <section id="video" class="section video-section">
+      <div class="section-head reveal">
+        <p class="eyebrow">CRT ARCHIVE</p>
+        <h2>VIDEO</h2>
+      </div>
+      <div class="video-grid">
+        <a class="video-card reveal" href="https://youtube.com/shorts/Ko8LknaNe_Q?si=jdN96FwwEWsmMBd0" target="_blank" rel="noreferrer">
+          <img src="https://img.youtube.com/vi/Ko8LknaNe_Q/hqdefault.jpg" alt="Punk Ducali Festival video 1" />
+          <span class="play">PLAY</span>
+        </a>
+        <a class="video-card reveal delay-1" href="https://youtube.com/shorts/yVuRdgPoDdg?si=BQLauMwPYfHKJo00" target="_blank" rel="noreferrer">
+          <img src="https://img.youtube.com/vi/yVuRdgPoDdg/hqdefault.jpg" alt="Punk Ducali Festival video 2" />
+          <span class="play">PLAY</span>
+        </a>
+        <a class="video-card reveal delay-2" href="https://youtube.com/shorts/X-580_vtsRE?si=dEhm8HujNIS2MRLb" target="_blank" rel="noreferrer">
+          <img src="https://img.youtube.com/vi/X-580_vtsRE/hqdefault.jpg" alt="Punk Ducali Festival video 3" />
+          <span class="play">PLAY</span>
+        </a>
+      </div>
+    </section>
 
-<section id="support" class="support">
-<h2>SOSTIENI IL PUNK DUCALI FESTIVAL</h2>
-<a href="https://gofund.me/635ff853e">SOSTIENICI SU GOFUNDME</a>
+    <section id="archive" class="section archive-section">
+      <div class="section-head reveal">
+        <p class="eyebrow">VHS MEMORY STACK</p>
+        <h2>ARCHIVIO EDIZIONI</h2>
+      </div>
+      <div class="vhs-stack reveal">
+        <article class="vhs open">
+          <button><span>2025</span><b>V EDIZIONE</b></button>
+          <div class="vhs-content"><img src="assets/posters/poster-2025.jpg" alt="Poster 2025"><p>Marsh Mallows, Latte+, Cabrera, Punk Ducali, Zia Shaniqua, Lillians, Libidine, Venere Gommosa, The Underdogs, Devasta, Degeneradio, Lil Spino, Pleiades, Cam'Out, Helycobacter, Manny, Noise Caps, Nix</p></div>
+        </article>
+        <article class="vhs">
+          <button><span>2024</span><b>IV EDIZIONE</b></button>
+          <div class="vhs-content"><img src="assets/posters/poster-2024.jpg" alt="Poster 2024"><p>RFC, Spaventapassere, Civic-50, Loser Name, Punk Ducali, Zia Shaniqua, Thousand Years Between, Penelope Aspetta, Kusameze, Random Act, I Treni, Fainted, The Blink Bang Theory, Degeneradio, Cam'Out, Jack Anal, Stoneguard, Dalts</p></div>
+        </article>
+        <article class="vhs">
+          <button><span>2023</span><b>III EDIZIONE</b></button>
+          <div class="vhs-content"><img src="assets/posters/poster-2023.jpg" alt="Poster 2023"><p>Antefatti, Punk Ducali, Zia Shaniqua, Kusameze, Pentailed, Deathwood, SHS Bears, Cam'Out, Fainted, Karma Piatta, Calliope, PsicoAnalisi, Voiceless</p></div>
+        </article>
+        <article class="vhs">
+          <button><span>2022</span><b>II EDIZIONE</b></button>
+          <div class="vhs-content"><img src="assets/posters/poster-2022.jpg" alt="Poster 2022"><p>Punk Ducali, Penelope Aspetta, Uino, Francesco Crispi, Donquixote, Loud Sound</p></div>
+        </article>
+        <article class="vhs">
+          <button><span>2020</span><b>I EDIZIONE</b></button>
+          <div class="vhs-content"><img src="assets/posters/poster-2020.jpg" alt="Poster 2020"><p>Punk Ducali, Deathwood, Le Crisi del Colle, Psicoanalisi, Helycobacter, Francesco Crispi</p></div>
+        </article>
+      </div>
+    </section>
 
-<div class="atrikiri">
-<div>
-<p>EVENTO ORGANIZZATO DA</p>
-<a href="https://www.instagram.com/atrikiri/">
-<img src="./assets/atrikiri.png">
-</a>
-</div>
-</div>
-</section>
+    <section id="foto" class="section gallery-section">
+      <div class="section-head reveal">
+        <p class="eyebrow">FLASH / SWEAT / CHAOS</p>
+        <h2>FOTO</h2>
+      </div>
+      <div class="masonry reveal">
+        <img src="assets/gallery/live-01.jpg" alt="Punk Ducali live photo">
+        <img src="assets/gallery/live-02.jpg" alt="Punk Ducali live photo">
+        <img src="assets/gallery/live-04.jpg" alt="Punk Ducali live photo">
+        <img src="assets/gallery/live-05.jpg" alt="Punk Ducali live photo">
+        <img src="assets/gallery/live-06.jpg" alt="Punk Ducali live photo">
+        <img src="assets/gallery/live-07.jpg" alt="Punk Ducali live photo">
+        <img src="assets/gallery/live-08.jpg" alt="Punk Ducali live photo">
+        <img src="assets/gallery/live-09.jpg" alt="Punk Ducali live photo">
+        <img src="assets/gallery/live-10.jpg" alt="Punk Ducali live photo">
+        <img src="assets/gallery/live-11.jpg" alt="Punk Ducali live photo">
+        <img src="assets/gallery/live-12.jpg" alt="Punk Ducali live photo">
+      </div>
+    </section>
 
+    <section id="sostienici" class="section support-section reveal">
+      <h2>SOSTIENI IL PUNK DUCALI FESTIVAL</h2>
+      <a class="btn primary giant" href="https://www.gofundme.com/f/punk-ducali-festival-vi-edizione?attribution_id=sl:ba54d1ba-b515-4c9b-bf9a-f20b93e70458&lang=it_IT&ts=1778440807&utm_campaign=man_ss_icons&utm_content=amp20_t1&utm_medium=customer&utm_source=copy_link" target="_blank" rel="noreferrer">GOFUNDME</a>
+    </section>
+
+    <section id="contatti" class="section contact-section">
+      <div class="contact-card reveal">
+        <a class="atrikiri" href="https://www.instagram.com/atrikiri" target="_blank" rel="noreferrer"><img src="assets/logos/atrikiri.png" alt="ATRIKIRI APS"></a>
+        <div>
+          <h2>ATRIKIRI APS</h2>
+          <p>Organizza Punk Ducali Festival.</p>
+          <p><a href="mailto:punkducalifestival@gmail.com">punkducalifestival@gmail.com</a></p>
+          <p><a href="https://www.instagram.com/punk_ducali_festival" target="_blank" rel="noreferrer">@punk_ducali_festival</a> · <a href="https://www.instagram.com/atrikiri" target="_blank" rel="noreferrer">@atrikiri</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">Punk Ducali Festival · VI Edizione · Atri, Italia</footer>
+  <script src="script.js"></script>
 </body>
 </html>
