@@ -12,10 +12,20 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bangers&family=Bebas+Neue&family=Space+Grotesk:wght@400;600;700&family=Special+Elite&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <script>
+    try {
+      if (sessionStorage.getItem('punkDucaliIntroSeen')) document.documentElement.classList.add('intro-seen');
+    } catch (_) {}
+  </script>
 </head>
 <body>
   <div id="intro" class="intro" aria-hidden="true">
-    <img src="assets/logos/punk-ducali-logo-transparent.png" alt="" class="intro-logo" />
+    <div class="intro-signal">
+      <img src="assets/logos/punk-ducali-logo-transparent.png" alt="" class="intro-logo" />
+      <p class="intro-stamp">VI EDIZIONE // ATRI // 2026</p>
+      <span class="intro-progress"></span>
+    </div>
+    <div class="intro-flash"></div>
     <div class="noise"></div>
   </div>
 
@@ -59,10 +69,9 @@
         <p class="eyebrow">CLASSIFIED TRANSMISSION</p>
         <h2>LINE UP</h2>
       </div>
-      <div class="redacted-grid reveal delay-1" aria-label="Line up censurata">
-        <span>████████████</span><span>███████</span><span>███████████</span><span>████████</span>
-        <span>██████████████</span><span>██████</span><span>██████████</span><span>████████████</span>
-        <span>███████</span><span>█████████████</span><span>██████</span><span>███████████</span>
+      <p id="lineup-status" class="lineup-status reveal" aria-live="polite"></p>
+      <div id="lineup-grid" class="redacted-grid reveal delay-1" aria-label="Line up in aggiornamento">
+        <noscript>Attiva JavaScript per visualizzare gli annunci della line up.</noscript>
       </div>
     </section>
 
