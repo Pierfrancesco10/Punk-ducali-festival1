@@ -88,12 +88,21 @@ if (intro && !document.documentElement.classList.contains('intro-seen')) {
     finishIntro('animation');
   });
 
-  // Limite di sicurezza: l'intro non può mai bloccare la pagina oltre 2,9 secondi.
-  setTimeout(() => finishIntro('safety-timeout'), reducedMotion ? 780 : 2900);
+  // Limite di sicurezza: anche con asset lenti l'intro termina entro 3,4 secondi.
+  setTimeout(() => finishIntro('safety-timeout'), reducedMotion ? 780 : 3400);
 }
 
 $('.menu-toggle').addEventListener('click', () => $('.nav-links').classList.toggle('open'));
-$$('.nav-links a').forEach(a => a.addEventListener('click', () => $('.nav-links').classList.remove('open')));
+$$('.nav-links a').forEach(link => link.addEventListener('click', () => {
+  const nav = $('.nav-links');
+  if (nav.classList.contains('open')) setTimeout(() => nav.classList.remove('open'), 260);
+  else nav.classList.remove('open');
+  if (link.classList.contains('nav-atrikiri')) return;
+  link.classList.remove('nav-clicked');
+  void link.offsetWidth;
+  link.classList.add('nav-clicked');
+  setTimeout(() => link.classList.remove('nav-clicked'), 420);
+}));
 
 const io = new IntersectionObserver(entries => {
   entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
