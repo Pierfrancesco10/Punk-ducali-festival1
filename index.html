@@ -8,14 +8,38 @@
   <meta property="og:title" content="Punk Ducali Festival — VI Edizione" />
   <meta property="og:description" content="31 Luglio – 1 Agosto 2026 · Villa Comunale, Atri (TE)" />
   <meta property="og:image" content="assets/posters/poster-2026.jpg" />
+  <link rel="preload" as="image" href="assets/logos/punk-ducali-logo-transparent.png">
+  <link rel="preload" as="image" href="assets/posters/poster-2026.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bangers&family=Bebas+Neue&family=Space+Grotesk:wght@400;600;700&family=Special+Elite&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <script>
+    try {
+      if (sessionStorage.getItem('punkDucaliIntroSeen')) document.documentElement.classList.add('intro-seen');
+    } catch (_) {}
+  </script>
 </head>
 <body>
-  <div id="intro" class="intro" aria-hidden="true">
-    <img src="assets/logos/punk-ducali-logo-transparent.png" alt="" class="intro-logo" />
+  <div id="intro" class="intro" role="region" aria-label="Intro Punk Ducali Festival">
+    <button id="intro-skip" class="intro-skip" type="button">SKIP INTRO</button>
+    <div class="intro-collage">
+      <div class="intro-shot intro-shot-live-a"></div>
+      <div class="intro-shot intro-shot-poster"></div>
+      <div class="intro-shot intro-shot-live-b"></div>
+      <span class="intro-paper paper-a"></span>
+      <span class="intro-paper paper-b"></span>
+    </div>
+    <div class="intro-lockup">
+      <span class="intro-hit">LIVE // ATRI</span>
+      <div class="intro-logo-wrap">
+        <img src="assets/logos/punk-ducali-logo-transparent.png" alt="" class="intro-logo intro-logo-ghost" />
+        <img src="assets/logos/punk-ducali-logo-transparent.png" alt="" class="intro-logo intro-logo-main" />
+      </div>
+      <p class="intro-date">31 LUGLIO — 1 AGOSTO 2026</p>
+      <p class="intro-place">ATRI</p>
+    </div>
+    <div class="intro-stage-flash"></div>
     <div class="noise"></div>
   </div>
 
@@ -59,10 +83,9 @@
         <p class="eyebrow">CLASSIFIED TRANSMISSION</p>
         <h2>LINE UP</h2>
       </div>
-      <div class="redacted-grid reveal delay-1" aria-label="Line up censurata">
-        <span>████████████</span><span>███████</span><span>███████████</span><span>████████</span>
-        <span>██████████████</span><span>██████</span><span>██████████</span><span>████████████</span>
-        <span>███████</span><span>█████████████</span><span>██████</span><span>███████████</span>
+      <p id="lineup-status" class="lineup-status reveal" aria-live="polite"></p>
+      <div id="lineup-grid" class="redacted-grid reveal delay-1" aria-label="Line up in aggiornamento">
+        <noscript>Attiva JavaScript per visualizzare gli annunci della line up.</noscript>
       </div>
     </section>
 
