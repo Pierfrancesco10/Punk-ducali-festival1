@@ -9,17 +9,17 @@
     }),
     timeline: Object.freeze({
       crack: 0,
-      crackDuration: 300,
-      tear: 280,
-      tearDuration: 720,
-      artwork: 920,
-      artworkDuration: 820,
-      impact: 1760,
-      impactDuration: 720,
-      settle: 2550,
+      crackDuration: 480,
+      tear: 360,
+      tearDuration: 980,
+      artwork: 900,
+      artworkDuration: 1120,
+      impact: 2050,
+      impactDuration: 680,
+      settle: 2820,
       settleDuration: 720,
-      end: 3330,
-      safety: 3750,
+      end: 3580,
+      safety: 3800,
       reducedEnd: 700
     })
   });
