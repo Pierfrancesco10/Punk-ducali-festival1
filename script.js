@@ -62,36 +62,6 @@ function renderLineup() {
 renderLineup();
 setInterval(renderLineup, 60 * 1000);
 
-const intro = $('#intro');
-if (intro && !document.documentElement.classList.contains('intro-seen')) {
-  const introStartedAt = performance.now();
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let introFinished = false;
-
-  const finishIntro = reason => {
-    if (introFinished) return;
-    introFinished = true;
-    const durationMs = Math.round(performance.now() - introStartedAt);
-    window.__introMetrics = { durationMs, reason };
-    document.documentElement.dataset.introDuration = durationMs;
-    try { sessionStorage.setItem('punkDucaliIntroSeen', '1'); } catch (_) {}
-    intro.remove();
-  };
-
-  $('#intro-skip')?.addEventListener('click', () => {
-    intro.classList.add('intro-skipped');
-    setTimeout(() => finishIntro('skipped'), 140);
-  });
-
-  intro.addEventListener('animationend', event => {
-    if (event.target !== intro || event.animationName !== 'introExit') return;
-    finishIntro('animation');
-  });
-
-  // Limite di sicurezza: anche con asset lenti l'intro termina entro 3,4 secondi.
-  setTimeout(() => finishIntro('safety-timeout'), reducedMotion ? 780 : 3400);
-}
-
 $('.menu-toggle').addEventListener('click', () => $('.nav-links').classList.toggle('open'));
 $$('.nav-links a').forEach(link => link.addEventListener('click', () => {
   const nav = $('.nav-links');

@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bangers&family=Bebas+Neue&family=Space+Grotesk:wght@400;600;700&family=Special+Elite&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="intro.css" />
   <script>
     try {
       if (sessionStorage.getItem('punkDucaliIntroSeen')) document.documentElement.classList.add('intro-seen');
@@ -21,26 +22,40 @@
   </script>
 </head>
 <body>
-  <div id="intro" class="intro" role="region" aria-label="Intro Punk Ducali Festival">
-    <button id="intro-skip" class="intro-skip" type="button">SKIP INTRO</button>
-    <div class="intro-collage">
-      <div class="intro-shot intro-shot-live-a"></div>
-      <div class="intro-shot intro-shot-poster"></div>
-      <div class="intro-shot intro-shot-live-b"></div>
-      <span class="intro-paper paper-a"></span>
-      <span class="intro-paper paper-b"></span>
-    </div>
-    <div class="intro-lockup">
-      <span class="intro-hit">LIVE // ATRI</span>
-      <div class="intro-logo-wrap">
-        <img src="assets/logos/punk-ducali-logo-transparent.png" alt="" class="intro-logo intro-logo-ghost" />
-        <img src="assets/logos/punk-ducali-logo-transparent.png" alt="" class="intro-logo intro-logo-main" />
+  <div id="festival-intro" class="festival-intro" role="dialog" aria-modal="true" aria-label="Intro Punk Ducali Festival">
+    <button id="intro-skip" class="festival-intro__skip" type="button">SKIP</button>
+
+    <div class="manifesto-scene" aria-hidden="true">
+      <div class="manifesto-world" data-intro-artwork>
+        <img src="assets/posters/poster-2026.jpg" alt="" class="manifesto-world__poster" />
+        <span class="manifesto-world__ink"></span>
       </div>
-      <p class="intro-date">31 LUGLIO — 1 AGOSTO 2026</p>
-      <p class="intro-place">ATRI</p>
+
+      <div class="creature-window">
+        <img src="assets/posters/poster-2026.jpg" alt="" class="creature-window__poster" />
+        <span class="creature-window__shadow"></span>
+      </div>
+
+      <div class="paper-shell">
+        <div class="paper-panel paper-panel--left"><span class="paper-fold"></span></div>
+        <div class="paper-panel paper-panel--right"><span class="paper-fold"></span></div>
+        <svg class="tear-seam" viewBox="0 0 100 1000" preserveAspectRatio="none" focusable="false">
+          <path d="M52 0 C42 48 58 83 46 125 C61 170 39 214 54 258 C40 310 61 354 44 401 C59 448 41 492 55 539 C39 590 60 638 45 684 C57 733 40 781 53 827 C43 875 58 921 48 1000" />
+        </svg>
+        <i class="paper-fragment paper-fragment--a"></i>
+        <i class="paper-fragment paper-fragment--b"></i>
+        <i class="paper-fragment paper-fragment--c"></i>
+      </div>
+
+      <div class="logo-impact" data-intro-logo>
+        <img src="assets/logos/punk-ducali-logo-transparent.png" alt="" class="logo-impact__register" />
+        <img src="assets/logos/punk-ducali-logo-transparent.png" alt="" class="logo-impact__main" />
+        <span class="intro-fallback-mark">PUNK DUCALI FESTIVAL</span>
+        <p>31 LUGLIO — 1 AGOSTO 2026<br><b>VILLA COMUNALE · ATRI</b></p>
+      </div>
+
+      <span class="impact-flash"></span>
     </div>
-    <div class="intro-stage-flash"></div>
-    <div class="noise"></div>
   </div>
 
   <div class="sky-layer"></div>
@@ -178,7 +193,8 @@
     </section>
   </main>
 
-  <footer class="footer">Punk Ducali Festival · VI Edizione · Atri, Italia</footer>
+  <footer class="footer">Punk Ducali Festival · VI Edizione · Atri, Italia <button id="intro-replay" class="intro-replay" type="button">Rivedi intro</button></footer>
+  <script src="intro.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
