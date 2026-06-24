@@ -135,5 +135,6 @@ a{color:inherit}
   .contact-card>div{display:flex;width:100%;min-width:0;flex-direction:column;align-items:center}
   .contact-card h2,.contact-card p{width:100%;margin-left:auto;margin-right:auto;text-align:center}
   .contact-card p a{overflow-wrap:anywhere;word-break:break-word}
+  .contact-card a[href^="mailto:"]{font-size:clamp(.78rem,4.15vw,1.05rem);letter-spacing:-.02em;white-space:nowrap;overflow-wrap:normal;word-break:normal}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.intro{animation:introExit .16s ease .58s forwards}.intro *,.intro:before,.intro:after,.redacted-grid .redacted:after,.redacted-grid .revealed,.poster-main{animation:none!important}.intro-collage,.intro-hit,.intro-date,.intro-place{display:none}.intro-lockup{display:grid;opacity:1;width:min(88vw,780px)}.intro-logo-wrap{animation:none;opacity:1}.reveal{transition:none}}
