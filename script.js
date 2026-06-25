@@ -12,7 +12,7 @@ const lineup = [
   { name: 'Osaka Flu', publishAt: '2026-06-30T00:00:00+02:00' },
   { name: 'Dream After Death', publishAt: '2026-07-01T00:00:00+02:00' },
   { name: 'Bobby Peru & the Garmonboys', publishAt: '2026-07-02T00:00:00+02:00' },
-  { name: null, publishAt: null },
+  { name: 'Slowroam', publishAt: '2026-07-03T00:00:00+02:00' },
   { name: null, publishAt: null },
   { name: null, publishAt: null },
   { name: null, publishAt: null },
@@ -42,7 +42,9 @@ function renderLineup() {
     const isPublished = item.name && item.publishAt && now >= Date.parse(item.publishAt);
 
     if (isPublished) {
-      slot.className = 'revealed';
+      const nameLength = item.name.length;
+      const nameScale = nameLength <= 5 ? 'short-name' : nameLength >= 18 ? 'long-name' : 'medium-name';
+      slot.className = `revealed ${nameScale}`;
       slot.textContent = item.name;
       slot.setAttribute('aria-label', item.name);
     } else {
