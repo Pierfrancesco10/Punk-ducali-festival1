@@ -47,6 +47,19 @@ function renderLineup() {
       slot.className = `revealed ${nameScale}`;
       slot.textContent = item.name;
       slot.setAttribute('aria-label', item.name);
+      slot.dataset.band = item.name;
+      slot.setAttribute('role', 'button');
+      slot.setAttribute('tabindex', '0');
+      slot.addEventListener('click', () => {
+        slot.classList.remove('lineup-glitch');
+        void slot.offsetWidth;
+        slot.classList.add('lineup-glitch');
+      });
+      slot.addEventListener('keydown', event => {
+        if (event.key !== 'Enter' && event.key !== ' ') return;
+        event.preventDefault();
+        slot.click();
+      });
     } else {
       slot.className = 'redacted';
       slot.textContent = '████████████';

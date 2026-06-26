@@ -171,10 +171,95 @@ a{color:inherit}
   line-height:.86;
   letter-spacing:.005em;
 }
+.redacted-grid .revealed{
+  cursor:pointer;
+  transition:filter .16s ease,box-shadow .16s ease,transform .16s ease;
+}
+.redacted-grid .revealed:hover,
+.redacted-grid .revealed:focus-visible{
+  filter:contrast(1.08) saturate(1.08);
+  outline:3px solid var(--orange);
+  outline-offset:4px;
+}
+.redacted-grid .revealed.lineup-glitch{
+  animation:lineupCardGlitch .42s steps(2,end) both;
+}
 @keyframes declassifyPoster{
   0%{background:var(--ink);color:var(--ink);filter:blur(5px);transform:translateX(-7px) rotate(var(--band-tilt,-1.1deg))}
   45%{filter:contrast(2);transform:translateX(6px) rotate(var(--band-tilt-hit,1deg))}
   100%{filter:none;transform:rotate(var(--band-tilt,-1.1deg))}
+}
+@keyframes lineupCardGlitch{
+  0%,100%{
+    filter:none;
+    text-shadow:3px 3px 0 #fff,5px 5px 0 rgba(223,117,49,.92),-1px -1px 0 rgba(23,52,71,.42);
+  }
+  18%{
+    filter:contrast(1.8) saturate(1.35);
+    transform:translateX(-3px) skewX(-3deg);
+    text-shadow:-5px 0 0 rgba(255,47,155,.58),5px 2px 0 rgba(111,175,143,.72),3px 3px 0 #fff;
+  }
+  38%{
+    transform:translateX(4px) skewX(2deg);
+    text-shadow:5px 0 0 rgba(223,117,49,.75),-4px -1px 0 rgba(23,52,71,.55),3px 3px 0 #fff;
+  }
+  62%{
+    filter:contrast(1.35);
+    transform:translateX(-1px);
+  }
+}
+
+@media(min-width:861px){
+  .redacted-grid span{
+    height:clamp(148px,9.6vw,156px);
+    min-height:0;
+    padding:20px 14px;
+  }
+  .redacted-grid .revealed{
+    height:clamp(148px,9.6vw,156px);
+    min-height:0;
+    padding:clamp(16px,1.8vw,24px) clamp(14px,1.7vw,22px);
+    line-height:.88;
+    transform:none;
+    animation:none;
+  }
+  .redacted-grid .revealed.short-name{
+    font-size:clamp(3.9rem,32cqw,5.9rem);
+    line-height:.82;
+  }
+  .redacted-grid .revealed.medium-name{
+    font-size:clamp(2.25rem,12.9cqw,3.05rem);
+    line-height:.88;
+    letter-spacing:.012em;
+  }
+  .redacted-grid .revealed.long-name{
+    font-size:clamp(1.42rem,9.6cqw,2.3rem);
+    line-height:.9;
+  }
+  .redacted-grid .revealed.long-name,
+  .redacted-grid .revealed.medium-name{
+    overflow-wrap:break-word;
+  }
+}
+
+@media(max-width:860px){
+  .redacted-grid .revealed{
+    min-height:clamp(136px,35vw,170px);
+    padding:clamp(18px,5vw,26px) clamp(14px,5vw,22px);
+  }
+  .redacted-grid .revealed.short-name{
+    font-size:clamp(5.2rem,28cqw,7.7rem);
+    line-height:.78;
+  }
+  .redacted-grid .revealed.medium-name{
+    font-size:clamp(2.6rem,15.5cqw,4.05rem);
+    line-height:.88;
+  }
+  .redacted-grid .revealed.long-name{
+    font-size:clamp(2rem,10.5cqw,3.35rem);
+    line-height:.92;
+    overflow-wrap:break-word;
+  }
 }
 
 @media(max-width:900px){.nav-links a:not(.nav-atrikiri){font-size:1.5rem}.masonry{grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:clamp(48px,9vw,72px)}.masonry img,.masonry img:nth-child(2),.masonry img:nth-child(3),.masonry img:nth-child(8),.masonry img:nth-child(9),.masonry img:nth-child(13),.masonry img:nth-child(14){grid-column:span 2;grid-row:span 4}.masonry img:nth-child(1),.masonry img:nth-child(7){grid-column:span 4;grid-row:span 5}}
@@ -201,4 +286,4 @@ a{color:inherit}
   .contact-card p a{overflow-wrap:anywhere;word-break:break-word}
   .contact-card a[href^="mailto:"]{font-size:clamp(.78rem,4.15vw,1.05rem);letter-spacing:-.02em;white-space:nowrap;overflow-wrap:normal;word-break:normal}
 }
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.intro{animation:introExit .16s ease .58s forwards}.intro *,.intro:before,.intro:after,.redacted-grid .redacted:after,.redacted-grid .revealed,.poster-main{animation:none!important}.intro-collage,.intro-hit,.intro-date,.intro-place{display:none}.intro-lockup{display:grid;opacity:1;width:min(88vw,780px)}.intro-logo-wrap{animation:none;opacity:1}.reveal{transition:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.intro{animation:introExit .16s ease .58s forwards}.intro *,.intro:before,.intro:after,.redacted-grid .redacted:after,.redacted-grid .revealed,.redacted-grid .revealed.lineup-glitch,.poster-main{animation:none!important}.intro-collage,.intro-hit,.intro-date,.intro-place{display:none}.intro-lockup{display:grid;opacity:1;width:min(88vw,780px)}.intro-logo-wrap{animation:none;opacity:1}.reveal{transition:none}}
