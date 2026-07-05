@@ -13,11 +13,11 @@ const lineup = [
   { name: 'Dream After Death', publishAt: '2026-07-01T00:00:00+02:00' },
   { name: 'Bobby Peru & the Garmonboys', publishAt: '2026-07-02T00:00:00+02:00' },
   { name: 'Slowroam', publishAt: '2026-07-03T00:00:00+02:00' },
+  { name: 'Punk Ducali', publishAt: '2026-07-05T00:00:00+02:00' },
+  { name: 'Sinecura', publishAt: '2026-07-06T00:00:00+02:00' },
   { name: null, publishAt: null },
-  { name: null, publishAt: null },
-  { name: null, publishAt: null },
-  { name: null, publishAt: null },
-  { name: null, publishAt: null }
+  { name: 'Calliope', publishAt: '2026-07-08T00:00:00+02:00', contest: true },
+  { name: 'Lil Spino', publishAt: '2026-07-09T00:00:00+02:00', contest: true }
 ];
 
 const italianDate = new Intl.DateTimeFormat('it-IT', {
@@ -39,12 +39,13 @@ function renderLineup() {
 
   lineup.forEach((item, index) => {
     const slot = document.createElement('span');
+    const isContest = item.contest === true;
     const isPublished = item.name && item.publishAt && now >= Date.parse(item.publishAt);
 
     if (isPublished) {
       const nameLength = item.name.length;
       const nameScale = nameLength <= 5 ? 'short-name' : nameLength >= 18 ? 'long-name' : 'medium-name';
-      slot.className = `revealed ${nameScale}`;
+      slot.className = `revealed ${nameScale}${isContest ? ' contest-slot' : ''}`;
       slot.textContent = item.name;
       slot.setAttribute('aria-label', item.name);
       slot.dataset.band = item.name;
@@ -61,9 +62,9 @@ function renderLineup() {
         slot.click();
       });
     } else {
-      slot.className = 'redacted';
+      slot.className = `redacted${isContest ? ' contest-slot' : ''}`;
       slot.textContent = '████████████';
-      slot.setAttribute('aria-label', `Band ${index + 1} non ancora annunciata`);
+      slot.setAttribute('aria-label', `${isContest ? 'Contest, ' : ''}Band ${index + 1} non ancora annunciata`);
     }
 
     grid.append(slot);
