@@ -15,8 +15,8 @@ const lineup = [
   { name: 'Slowroam', publishAt: '2026-07-03T00:00:00+02:00' },
   { name: 'Punk Ducali', publishAt: '2026-07-05T00:00:00+02:00' },
   { name: 'Sinecura', publishAt: '2026-07-06T00:00:00+02:00' },
-  { name: null, publishAt: null },
-  { name: 'Calliope', publishAt: '2026-07-08T00:00:00+02:00', contest: true },
+  { name: 'Low Tide', publishAt: '2026-07-07T00:00:00+02:00' },
+  { name: 'Zenith', publishAt: '2026-07-08T00:00:00+02:00', contest: true },
   { name: 'Lil Spino', publishAt: '2026-07-09T00:00:00+02:00', contest: true }
 ];
 
